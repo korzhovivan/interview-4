@@ -1,0 +1,58 @@
+.my-select{
+    display: none;
+}
+@media only screen and (min-width: 1024px) {
+    .my-select{
+        display: block;
+        position: relative;
+        margin-bottom: 10px;
+        margin-left: 20px;
+        cursor: pointer;
+        padding: 5px 10px;
+        border-radius: 3px;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        -o-user-select: none;
+        user-select: none;
+    }
+    .my-select:hover{
+        background: rgb(233, 232, 232);
+    }
+    .selected{
+        display: flex;
+        align-items: center;
+    }
+    .arrow{
+        margin-left: 13px;
+    }
+    .select-img{
+        height: 30px;
+        display: block;
+    }
+    .dropdown{
+        position: absolute;
+        display: block;
+        background: rgb(233, 232, 232);
+        left: 0px;
+        border-radius: 0px 0px 3px 3px;
+    }
+    
+    
+    .dropdown img{
+        background: rgb(233, 232, 232);
+        margin-left: 10px;
+        margin-right: 37px;
+        
+    }
+    .closed{
+        display: none;
+    }
+    .grey{
+        background: rgb(233, 232, 232);
+    }
+}
+
+
+
