@@ -1,6 +1,6 @@
 .header{
     max-width: 1360px;
-    height: 2500px;
+
     background: rgb(235, 213, 213);
     margin: 0 auto;
 }
@@ -28,7 +28,9 @@
 .img2{
     background: url('../../img/picture_2.png') no-repeat center/cover !important;
 }
-
+.thumbs-wrapper{
+    display: none;
+}
 .slider-wrapper{
     position: relative;
     height: 216px;

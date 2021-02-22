@@ -137,7 +137,7 @@
     }
     .desc-btn{
         border: 1px solid #F1F1F1;
-        pointer-events: none;
+        pointer-events: none; 
     }
     .desc-style-input{
         background: #F1F1F1;
@@ -240,5 +240,5 @@
     }
 }
 .close-btn{
-    display: none;
+    visibility: hidden;
 }
