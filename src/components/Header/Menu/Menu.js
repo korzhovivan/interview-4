@@ -9,17 +9,23 @@ import arrow from '../../../img/arrow.png'
 import arrowBottom from '../../../img/arrow_bottom.png'
 import MySelect from './MySelect/MySelect';
 
+
+
 export default function Menu(){
     //toogle className for animation
     const [isMenuOpen, setMenu] = useState("false");
-    const [isSearchOpen, setSearch] = useState("false");
+    const [isSearchOpenMob, setSearchMob] = useState("false");
+    const [isSearchOpenDesc, setSearchDesc] = useState("false");
     
 
     const openMenu = () => {
         setMenu(!isMenuOpen);
       };
-      const openSearchBox = () =>{
-        setSearch(!isSearchOpen);
+    const openSearchBox_Mob = () =>{
+        setSearchMob(!isSearchOpenMob);
+    }
+    const openSearchBox_Desc = () =>{
+        setSearchDesc(!isSearchOpenDesc);
     }
 
     //prevent scroll when menu open
@@ -56,14 +62,33 @@ export default function Menu(){
                     </div>
                     <div className="desc_menu-item">
                         <span><a className="menu-link" href="#">Контакты</a></span>
+
+                        <form  className={`my-input-group ${!isSearchOpenDesc ? "show-search-desc" : ""} desc-input`}>
+                        <input
+                            type="text" 
+                            className="form-control my-style-input desc-style-input"
+                            placeholder="Поиск" 
+                            />
+                             
+                        <div className="input-group-append desc-group">
+                            <button 
+                                type="submit"
+                                className="btn btn-outline-secondary my-style-button desc-btn"
+                                id="button-addon2">
+                            <img src={vector}/>
+                            </button>
+                        </div>
+                    </form>
                     </div>
                  </div>
 
                  <div className="right-col">
-                    <img className="vector" src={vector} alt={"vector"} onClick={openSearchBox}
-                     hidden={!isSearchOpen ? true : false} />
+                    <img className={"mob_vector"} src={vector} alt={"vector"} onClick={openSearchBox_Mob}
+                     hidden={!isSearchOpenMob ? true : false} />
 
-                    <form  className={`my-input-group ${!isSearchOpen ? "show-search" : ""}`}>
+                    <img className={`vector desc_vector ${!isSearchOpenDesc ? "close-btn" : ""}`} src={vector} alt={"vector"} onClick={openSearchBox_Desc} />
+
+                    <form  className={`my-input-group mob-input ${!isSearchOpenMob ? "show-search-mob" : ""}`}>
                         <input
                             type="text" 
                             className="form-control my-style-input"
@@ -79,6 +104,8 @@ export default function Menu(){
                             </button>
                         </div>
                     </form>
+
+                    
                     <MySelect languages={[
                         {id:1,img: russia, lng: "rissia"},
                         {id:0,img: ukraine, lng: "ukraine"},

@@ -78,10 +78,7 @@
     box-shadow: none;
 }
 
-.show-search{
-    display: flex;
-    transition: 0.8s;
-}
+
 
 .opened-menu{
     background: linear-gradient(180deg, #49494A 17.19%, #383836 100%);
@@ -104,15 +101,61 @@
     align-items: center;
     justify-content: space-between;
 }
+
 .flag{
     height: 31px;
     margin-left: 15px;
 }
-.desctop-menu{
+.desctop-menu, .desc_vector {
     display: none;
 }
 
+.show-search-mob{
+    display: flex;
+}
+
+.show-search-desc{
+    display: flex;
+}
+
+@media screen and (max-width: 1023px) {
+    .desc-input{
+        display: none ;
+    }
+  }
 @media only screen and (min-width: 1024px) {
+    .desc-input{
+        position: absolute;
+        top: 105px;
+        right: -119px;
+        z-index: 4;
+        background: #F1F1F1;
+        border: none;
+        width: 240px;
+        height: 41px;
+        font-size: 16px;
+    }
+    .desc-btn{
+        border: 1px solid #F1F1F1;
+        pointer-events: none;
+    }
+    .desc-style-input{
+        background: #F1F1F1;
+        width: 100%;
+        max-width: none;
+        height: auto;
+    }
+    .desc-group{
+        display: flex;
+        align-items: center;
+    }
+    .desc_vector{
+        display: block;
+        margin-bottom: 20px;
+    }
+    .mob-input, .mob_vector, .opened-menu, .container{
+        display: none;
+    }
     .top-part-menu{
         height: 106px;
         padding:0px 40px;
@@ -120,15 +163,8 @@
     .logo{
         height: 75px; 
     }
-    .opened-menu{
-        display: none;
-    }
-    .container {
-        display: none;  
-    }
     .desctop-menu{
         display: flex;
-        
         height: 100%;
         position: relative;
     }
@@ -138,7 +174,7 @@
         display: flex;
         align-items: flex-end;
         padding-right: 20px;
-        margin-left: 20px;
+        padding-left: 20px;
         padding-bottom: 9px;
         color: #3E3E3E;
         font-size: 18px;
@@ -149,7 +185,7 @@
     .active-item {       
         padding-bottom: 0;
     }
-    .desc_menu-item:hover  .menu-link{       
+    .menu-link:hover {       
         color: #1b1a1a;
         transition: 5ms;
         font-weight: bold;
@@ -177,13 +213,14 @@
         align-items: flex-end;
         justify-content: flex-end;
     }
-    .vector{
+    .mob_vector{
         margin-bottom: 21px;
     }
     .lng_select{
         margin-bottom: 21px;
     }
 }
+
 @media only screen and (min-width: 1300px){
     .top-part-menu{
         padding:0px 90px;
@@ -191,14 +228,17 @@
     .logo{
         height: 90px; 
     }
-    .desc_menu-item{
-        padding-right: 25px;
-        padding-left: 25px;
-    }
+    
 }
 @media only screen and (min-width: 1400px){
     .desc_menu-item{
         padding-right: 30px;
         padding-left: 30px;
     }
+    .desc-input{
+        right: -99px;
+    }
+}
+.close-btn{
+    display: none;
 }

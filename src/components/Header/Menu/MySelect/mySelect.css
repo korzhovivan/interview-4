@@ -3,6 +3,7 @@
 }
 @media only screen and (min-width: 1024px) {
     .my-select{
+        z-index: 5;
         display: block;
         position: relative;
         margin-bottom: 10px;
@@ -16,6 +17,7 @@
         -ms-user-select: none;
         -o-user-select: none;
         user-select: none;
+        background: none;
     }
     .my-select:hover{
         background: rgb(233, 232, 232);
