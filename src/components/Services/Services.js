@@ -1,26 +1,45 @@
 import React from 'react'
+import MultiRef from 'react-multi-ref';
 import "./services.css"
 
 
-import img1_d from "../../img/desc_p_1.png";
-import img2_d from "../../img/desc_p_2.png";
-import img3_d from "../../img/desc_p_3.png";
-import img4_d from "../../img/desc_p_4.png";
-import img5_d from "../../img/desc_p_5.png";
-import img6_d from "../../img/desc_p_6.png";
-import img7_d from "../../img/desc_p_7.png";
-import img8_d from "../../img/desc_p_8.png";
+
+
+import gear_big from '../../img/gear_big.png';
+import gear_small from '../../img/gear_small.png';
 
 
 
 export default function Services(){
+
+    const gears = []
+
+    for (let i = 0; i < 4; i++) {
+        gears.push(React.createRef())
+    }
+
+    window.onscroll = function () {
+        scrollRotate();
+    };
     
+    function scrollRotate() {
+        gears.forEach(gearRef => {
+            const myReference = gearRef.current 
+            myReference.style.transformOrigin = "center center";
+            myReference.style.transform = "rotate(" + window.pageYOffset/2 + "deg)";
+        });
+    }
+
     return(
         <div className="services-wrapper">
                 <h2 className="title">Услуги</h2>
-                <div className="stick">
+                <div className="stick"></div>
 
-                </div>
+                
+                <img ref={gears[0]} className="gear gear_t_l" src={gear_big}/>
+                <img ref={gears[1]} className="gear gear_t_r" src={gear_small}/>
+                <img ref={gears[2]} className="gear gear_b_l" src={gear_small}/>
+                <img ref={gears[3]} className="gear gear_b_r" src={gear_big} />
 
                 <div className="services">
                     
@@ -65,12 +84,11 @@ export default function Services(){
                         </div> 
                     </div>
                 </div>
-            <div>
-                tyketyktykytkytkkkytkykytk
-                eyketktekyytekytekytktykty
-                tyktkytekykkytkykteyktykeyt
-                etyketktykykytkytkytkykytkyt
-            </div>
+
+                <a href="#" className="count_btn">
+                    <span className="btn_mob_text">Расчет стоимости</span>
+                    <span className="btn_desc_text">Быстрый расчет цены по чертежу</span>
+                </a>   
         </div>
     )
 }

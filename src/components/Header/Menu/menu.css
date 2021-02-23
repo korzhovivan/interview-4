@@ -1,8 +1,3 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap');
-*{
-    font-family: 'Raleway', sans-serif;
-}
 .top-part-menu{
     max-width: 1360px;
     height: 60px;
@@ -108,6 +103,7 @@
 }
 .desctop-menu, .desc_vector {
     display: none;
+    cursor: pointer;
 }
 
 .show-search-mob{

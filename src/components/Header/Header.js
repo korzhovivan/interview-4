@@ -16,7 +16,7 @@ export default function Header(){
         <div className="header">
                 <Menu />
                 <div className="slider-wrapper">
-                    <Carousel>
+                    <Carousel showThumbs={false}>
                         <div className="slide img1">
                         </div>
                         <div className="slide img2">

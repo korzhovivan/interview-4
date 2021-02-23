@@ -1,0 +1,142 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+
+
+.footer{
+    max-width: 1360px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+.footer a{
+    display: block;
+    font-size: 12px;
+    color: #AEAEAE;
+    text-decoration: none;
+    font-weight: 500;
+    line-height: 16px;
+    margin-left: 16px;
+    margin-top: 16px;
+    cursor: pointer;
+}
+.footer a:hover{
+    color: #727272;
+}
+.about > a:nth-child(1){
+    margin-top: 4px;
+}
+.title-block > a:nth-child(1){
+    margin-top: 4px;
+}
+
+.title-block{
+    margin-bottom: 4px;
+    height: 55px;
+    width: 100%;
+    padding-top: 20px;
+    box-sizing: border-box;
+    border-right: 1px solid #E4B56B;
+    min-width: 129px;
+}
+.suggestions{
+    padding-right: 5px;
+}
+.title-block p {
+    font-size: 16px;
+    line-height: 18px;
+    margin: 0;
+    margin: 0px 20px 0px 16px;
+}
+.footer-menu{
+    display: flex;
+    justify-content: space-around;
+    padding-right: 10px;
+}
+
+
+.contact-info{
+    text-align: center;
+    color: #3E3E3E;
+    width: 60%;
+    margin: 0 auto;
+}
+.contact-info p{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.contact-info img{
+    margin-left: 15;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.contact-info  p:nth-child(1){
+    font-weight: 500;
+    margin-top: 30px;
+}
+.roboto{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}
+.author{
+    text-align: center;
+    margin-bottom: 17px;
+    cursor: pointer;
+}
+.about{
+    min-width: 145px;
+}
+
+@media only screen and (min-width: 300px){
+    .footer a{
+        font-size: 14px;
+    }
+}
+@media only screen and (min-width: 800px){
+  
+    .footer{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas:
+        "footer-menu footer-menu contact-info";
+        padding: 0px 40px;
+    }
+    .footer a{
+        font-size: 16px;
+    }
+    .title-block p{
+        font-size: 18px;
+    }
+    .footer-menu{
+        grid-area: footer-menu;
+    }
+    .contact-info{
+        grid-area: contact-info;
+        width: 100%;
+        text-align: start;
+        max-width: 220px;
+    }
+    .contact-info p:nth-child(1) {
+        margin-top: 20px;
+    }
+    .suggestions-menu{
+        display: flex;
+    }
+    .mt-0{
+        margin-top: 4px !important;
+    }
+    .about{
+        width: 50%;
+    }
+    
+}
+@media only screen and (min-width: 1024px){
+    .footer{
+        padding: 0px 90px;
+    }
+    .author{
+        margin-top: 50px;
+    }
+    .title-block{
+        margin-bottom: 14px;
+    }
+}
